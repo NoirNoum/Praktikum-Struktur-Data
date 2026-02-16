@@ -1,0 +1,96 @@
+#Pardede Putra Anjasmara
+#2505060061
+#Rombel_2
+
+# Kita mulai dari sini dengan membuat  array!
+import array as arr
+
+# ====================================
+# 1. MEMBUAT ARRAY
+# ====================================
+# Pada tahap ini kita membuat array dengan tipe data tertentu.
+# 'i' digunakan untuk integer 
+# 'd' digunakan untuk float/double
+
+# Membuat array dengan tipe data integer ('i')
+a = arr.array('i', [1, 2, 3])
+print("Array integer is : ", end=" ")
+for i in range(0, 3):
+    print(a[i], end=" ")
+print()
+
+# Membuat array dengan tipe data double/float ('d')
+b = arr.array('d', [2.5, 3.2, 3.3])
+print("\nArray float is : ", end=" ")
+for i in range(0, 3):
+    print(b[i], end=" ")
+
+# ====================================
+# 2. MENAMBAHKAN ELEMEN
+# ====================================
+# append() digunakan untuk menambahkan elemen di akhir array
+# insert(index, nilai) digunakan untuk menambahkan elemen pada posisi tertentu
+
+a.append(4)
+print("Setelah append(4):", a)
+
+a.insert(1, 10)
+print("Setelah insert(1, 10):", a)
+
+# ====================================
+# 3. MENGAKSES ELEMEN
+# ====================================
+# Elemen array diakses menggunakan indeks.
+# Indeks dimulai dari 0.
+
+print("Elemen indeks 0 :", a[0]) # array a, Elemen Pertama
+print("Elemen indeks 3 :", b[3]) # array b, Elemen Keempat
+
+# ====================================
+# 4. MENGHAPUS ELEMEN
+# ====================================
+# remove(nilai) menghapus elemen berdasarkan nilai.
+# pop() menghapus elemen terakhir secara default.
+
+a.remove(10)
+print("Setelah remove(10):", a)
+
+a.pop()
+print("Setelah pop():", a)
+
+# ====================================
+# 5. SLICING ARRAY
+# ====================================
+# Slicing digunakan untuk mengambil sebagian elemen array.
+# Format umum: array[start:end]
+# "start" termasuk, "end" tidak termasuk.
+
+print("a[1:3]  :", a[1:3])   # Dari indeks 1 sampai sebelum 3
+print("a[:2]   :", a[:2])    # Dari awal sampai sebelum indeks 2
+print("a[1:]   :", a[1:])    # Dari indeks 1 sampai akhir
+print("a[:]    :", a[:])     # Seluruh elemen
+print("a[::-1] :", a[::-1])  # Membalik urutan elemen
+
+# ====================================
+# 6. MENGUBAH ELEMEN
+# ====================================
+# Nilai array dapat diubah dengan langsung menetapkan nilai baru
+# pada indeks tertentu.
+
+a[0] = 99
+print("Setelah a[0] = 99 :", a)
+
+# ====================================
+# 7. OPERASI TAMBAHAN
+# ====================================
+# extend() menambahkan beberapa elemen sekaligus ke akhir array.
+# count() menghitung jumlah kemunculan suatu nilai.
+# reverse() membalik urutan elemen dalam array.
+
+a.extend([7, 8, 9])
+print("Setelah extend([7,8,9]) :", a)
+
+print("Jumlah angka 7 :", a.count(7))
+
+a.reverse()
+print("Setelah reverse() :", a)
